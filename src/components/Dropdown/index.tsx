@@ -88,6 +88,7 @@ const DropdownComponent: <T>(
       accessibilityLabel,
       itemAccessibilityLabelField,
       mode = 'default',
+      itemTouchableHighlightProps,
     } = props;
 
     const ref = useRef<View>(null);
@@ -417,6 +418,7 @@ const DropdownComponent: <T>(
             )}
             underlayColor={activeColor}
             onPress={() => onSelect(item)}
+            {...itemTouchableHighlightProps}
           >
             <View
               style={StyleSheet.flatten([
@@ -458,6 +460,7 @@ const DropdownComponent: <T>(
         onSelect,
         renderItem,
         valueField,
+        itemTouchableHighlightProps,
       ]
     );
 

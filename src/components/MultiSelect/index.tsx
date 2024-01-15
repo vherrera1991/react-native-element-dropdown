@@ -93,6 +93,7 @@ const MultiSelectComponent: <T>(
       itemAccessibilityLabelField,
       visibleSelectedItem = true,
       mode = 'default',
+      itemTouchableHighlightProps,
     } = props;
 
     const ref = useRef<View>(null);
@@ -417,6 +418,7 @@ const MultiSelectComponent: <T>(
             )}
             underlayColor={activeColor}
             onPress={() => onSelect(item)}
+            {...itemTouchableHighlightProps}
           >
             <View
               style={StyleSheet.flatten([
@@ -458,6 +460,7 @@ const MultiSelectComponent: <T>(
         labelField,
         onSelect,
         renderItem,
+        itemTouchableHighlightProps,
       ]
     );
 

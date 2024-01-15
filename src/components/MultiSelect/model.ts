@@ -4,6 +4,7 @@ import type {
   StyleProp,
   TextStyle,
   ViewStyle,
+  TouchableHighlightProps,
 } from 'react-native';
 
 export interface IMultiSelectRef {
@@ -57,6 +58,7 @@ export interface MultiSelectProps<T> {
   itemAccessibilityLabelField?: string;
   inverted?: boolean;
   mode?: 'default' | 'modal' | 'auto';
+  itemTouchableHighlightProps?: TouchableHighlightProps;
   onChange: (value: string[]) => void;
   renderLeftIcon?: (visible?: boolean) => JSX.Element | null | undefined;
   renderRightIcon?: (visible?: boolean) => JSX.Element | null | undefined;

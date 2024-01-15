@@ -5,6 +5,7 @@ import type {
   TextProps,
   ImageStyle,
   FlatListProps,
+  TouchableHighlightProps,
 } from 'react-native';
 
 export type IDropdownRef = {
@@ -54,6 +55,7 @@ export interface DropdownProps<T> {
   itemAccessibilityLabelField?: string;
   inverted?: boolean;
   mode?: 'default' | 'modal' | 'auto';
+  itemTouchableHighlightProps?: TouchableHighlightProps;
   onChange: (item: T) => void;
   renderLeftIcon?: (visible?: boolean) => JSX.Element | null | undefined;
   renderRightIcon?: (visible?: boolean) => JSX.Element | null | undefined;
